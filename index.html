@@ -92,14 +92,19 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						Applications of emotion classification based on speech have already been used to facilitate interactions in our daily lives. For example, At cash counters apply emotion classification to prioritize impatient customers. As another example, a warning system has been developed to detect if a driver exhibits anger or aggressive emotions. Emotion sensing has also been used in behaviour studies acoustic features have been extensively explored in both the time domain (pitch, speaking rate, duration of voiced segments, zero crossing rate, etc.) and the frequency domain (pitch, formant, Mel-frequency cepstral coefficients, etc.). In our work, we only choose the most basic features: pitch, formants, and MFCC. This reduces the computational complexity of the approach and can lead to both energy and bandwidth savings when the voice is captured on mobile devices. Commonly used classifiers for human emotion recognition from speech such as Hidden Markov Model (HMM), Neural Network (NN), Maximum likelihood bayes classifier (MLBC), Kernel deterioration and K-nearest Neighbours approach (KNN), support vector machine (SVM), Naive Bayes classifier, Gaussian Mixture Model (GMM). We choose SVM as our basic classifier because of its ease of training and its ability to work with any number of attributes. SVM is simple and efficient algorithm which has a very good classification performance compared to other classifiers. SVM are the popular learning method for classification ,regression and other learning tasks. SVM has a better classification performance on a small amount of training samples. But we are lacking in guidelines on choosing a better kernel with optimized parameters of SVM.There is no uniform pattern used to the choice of SVM with its parameters and kernel function with its parameters.In SVM, kernel functions are used to map data to a higher dimensional feature space without losing the originality. This conventional method of using kernel functions in SVM is to run simulations on training sets and find the kernel function which attains the highest averaged classification accuracy for the given problem. The most commonly used kernel function for SVM is Linear, Polynomial, radial basis function (RBF). The contributions of the Speech emotion recognition are as follows:
-						<ul>
-						<li>1) To obtain the maximum efficiency using the performance of SVM kernel method for each individual technique</li>
-						<li>2) Consideration of a cut-off value in each technique so the classification having better confidence level is selected and those with lesser confidence value are discarded as ‘not classified’.</li>
-						 The major principle of SVM is to establish a hyperplane as the decision surface maximizing the margin of separation between negative and positive samples. Thus SVM is designed for two-class pattern classification. We have used German speech database in this approach of emotion recognition and classification. The accuracy of emotion recognition can be made better by increasing the value of minimum confidence cut-off value.
+						Applications of emotion classification based on speech have already been used to facilitate interactions in our daily lives. For example, At cash counters apply emotion classification to prioritize impatient customers. As another example, a warning system has been developed to detect if a driver exhibits anger or aggressive emotions. Emotion sensing has also been used in behaviour studies. Acoustic features have been extensively explored in both the time domain (energy, speaking rate, duration of voiced segments, zero crossing rate, etc.) and the frequency domain (pitch, formant, Mel-frequency cepstral coefficients, etc.). In our work, we only choose the most basic features: pitch, formants, and MFCC. This reduces the computational complexity of the approach and can lead to both energy and bandwidth savings when the voice is captured on mobile devices.
+<br><br>
+ Commonly used classifiers for human emotion recognition from speech such as Hidden Markov Model (HMM), Neural Network (NN), Maximum likelihood bayes classifier (MLBC), Kernel deterioration and K-nearest Neighbours approach (KNN), support vector machine (SVM), Naive Bayes classifier, Gaussian Mixture Model (GMM). We chose SVM as our basic classifier because of its ease of training and its ability to work with any number of attributes. SVM is simple and efficient algorithm which has a very good classification performance compared to other classifiers. SVM are the popular learning method for classification ,regression and other learning tasks. SVM has a better classification performance on a small amount of training samples. But we are lacking in guidelines on choosing a better kernel with optimized parameters of SVM.There is no uniform pattern used to the choice of SVM with its parameters and kernel function with its parameters.In SVM, kernel functions are used to map data to a higher dimensional feature space without losing the originality. This conventional method of using kernel functions in SVM is to run simulations on training sets and find the kernel function which attains the highest averaged classification accuracy for the given problem. The most commonly used kernel function for SVM is Linear, Polynomial, radial basis function (RBF).
+<br><br>
+The contributions of the Speech emotion recognition are as follows:
+
+					<ul>
+						<li>To obtain the maximum efficiency using the performance of SVM kernel method for each individual technique</li>
+						<li>Consideration of a cut-off value in each technique so the classification having better confidence level is selected and those with lesser confidence value are discarded as ‘not classified’.</li>
 
 					 </ul>
-
+					 The major principle of SVM is to establish a hyperplane as the decision surface maximizing the margin of separation between negative and positive samples. Thus SVM is designed for two-class pattern classification. We have used German speech database in this approach of emotion recognition and classification. The accuracy of emotion recognition can be made better by increasing the value of minimum confidence cut-off value.
+					 <br>
 						<br>Framing: In Framing, the continuous input speech is segmented into N sample per frames. The first frame consists of N samples, second frame consists of M samples after N, and third frame contains 2M and so on. Here we frame the signal with time length of 25ms.
 
 
@@ -153,7 +158,7 @@
 					<br>STEP2: The main task in optimized process is to improve the classification accuracy rate of the SVM.
 					<br>STEP3: After optimizing process, the system trains an optimized model used to classify.
 					<br>STEP4: The system gives a classification result (class label or recognition rate) about test samples
-					
+
 				<ol type="A">
 					<li> Speech features</li>
 					In speech signal there are basically speech attributes for the feature extraction process. There
@@ -161,17 +166,46 @@
 					<ol>
 						<li> Frequency or pitch: A pitch is the fundamental frequency (F0) of the speech signal. It refers to the tone of speech. The pitch of each signal is different depends on the speed of the vibration of the object.</li>
 						<li> Spectral features: Two types of spectral features: The Mel-Frequency Cepstral Coefficients (MFCCs) and formant are reported as effective spectral features for emotion recognition. Most of researcher used the first 12 MFCCs and 4 formants are extracted from 25 ms Hamming-windowed speech frames every 10 ms, and so their contours are formed.</li>
-						<li> VAD : Voice activity detection (VAD), also known as speech activity detection or speech detection, is a technique used in speech processing in which the presence or absence of human speech is detected.The main uses of VAD are in speech coding and speech recognition. Generally, it is language independent.</li>
+						<img src="Pictures/fig3.png" alt="This text displays when the image is umavailable" width="100px" height="">
+						In order to obtain a set of MFCC features, the following procedure is commonly applied: Estimation of the spectrum by means of a Fourier transformation of the windowed signal, application of a triangular Mel filter bank to the estimated spectrum  and, finally, application of the DCT to the log-outputs of the filterbank.
+
+				<li> VAD : Voice activity detection (VAD), also known as speech activity detection or speech detection, is a technique used in speech processing in which the presence or absence of human speech is detected.The main uses of VAD are in speech coding and speech recognition. Generally, it is language independent.</li>
+
+
+
+
 					</ol>
-							In our project, we have mainly focussed on extraction of four important features -
-							MFCC
-							VAD
-							Pitch
-							Formants
+					<br>
 							<li>Feature extraction</li>
-							<li>SVM Classification</li>
+							In our project, we have mainly focussed on extraction of four important features -
+							<ul>
+							<li>MFCC</li>
+							<li>VAD</li>
+							<li>Pitch</li>
+							<li>Formants</li>
+
+						</ul>
+							<br><li>SVM Classification</li>
+							The underlying concept behind an SVM is structural risk minimization . A learning machine is chosen that minimizes the upper bound on the risk (or test error), which is a good measure of the generalizability of the machine. This is estimated as the ratio of misclassified vectors over the total number of training vectors when using a “leave-one-out” method . It can be shown that this is equal to the ratio of expected number of support vectors to the total number of training vectors.
+The power of SVMs lies in transforming data to a high dimensional space and constructing a linear binary classifier in this high dimensional space. Construction of a hyperplane in a feature space requires transformation of the -dimensional input vector into an -dimensional feature vector, i.e.
+              Φ: ℜn  --ℜN
+ An -dimensional linear separator and a bias b are then constructed for the set of transformed vectors. Classification of an unknown vector is done by first transforming the vector to the feature space and then computing
+             sgn(  w ⋅ φ(x ) + b )
+The vector can be written as a linear combination of a small set of vectors in the feature space. This can be mathematically expressed as
+        w=  ∑ αi .y.i φ( xi )
+where the summation is over all vectors in the training set whose corresponding ‘s are non-zero. These vectors are called support vectors [2]. Combining Equations 2 and 3, the classifier becomes .
+sgn∑ yi .αi  ⋅ φ(x) φ( xi )+b
+      Svs
+
+ the equation is prohibitively expensive to implement directly in the feature space, since it would involve a dot product computation in a very high dimensional space. However if we could define a function in the input space which equals the dot product in the feature space, the overall complexity of the process can be drastically reduced since we significantly lower the dimensionality. The existence of such a function is guaranteed by Mercer’s conditions [2,6]. Such functions are referred to as a kernel in the SVM approach. Thus Equation 4 can be   equivalently written as
+sgn∑ yi .αi  ⋅ k(x,xi )+b
+2 layer NN K(u v,) = Sigmoid s[ (uv)+c]
+
+: RBF: K(u v )=  exp{y(u-v)(u-v)}
+Since the decision region is dependent on the data set, by using prior knowledge of the data and the characteristics of various kernels, we can achieve better performance. For example, if a data set is known to need closed decision regions, it is better to use an RBF kernel rather than a linear or a low order polynomial kernel
+
 					</ol>
-					<img src="Pictures/fig3.png" alt="This text displays when the image is umavailable" width="200px" height="">
+
 					<!-- Write something here. -->
 					<!-- Stop edit here -->
 
@@ -199,11 +233,9 @@
 					<div class="text">
 
 						<!-- Start edit here  -->
-						As mentioned already, we have used the latest version of MATLAB 2017Rb as our coding platform. The experimental results on the test set are summarised in table 1 .
+						As mentioned already, we have used the latest version of MATLAB 2017Rb as our coding platform. The experimental results on the test set are summarised in the following table.
 						<!-- MAKE TABLE -->
-						<table>
-
-						</table>
+						<br>
 						<table>
 							<tr>
 								<td colspan="1">Emotion Expressed</td>
@@ -234,6 +266,8 @@
 								<td>71.428</td>
 							</tr>
 						</table>
+						<!-- <p style = " text-align:center">Table 1</p> -->
+						<br>
 						The overall accuracy when tested over test set was 78.947%, i.e. the error percentage was 21.052% for the chosen test set. From the above table, it is noticeable that both the emotions (Anger and Neutral) have characteristics similar to that of Joy but do not resemble each other. The worst performance is given by the algorithm on Neutral test set with error % upto 28.571%, whereas the response of algorithm to Joy test set is the best with error % of just 19.5%.
 
 						<br>Though it was expected that the Anger emotion would attain the highest accuracy ( as it is expressed with very different pitch as compared to the other two emotions), it stands at second position with minute difference of error % when compared with Joy emotion.
@@ -270,7 +304,9 @@
 					</div>
 				</div>
 			</div>
+			<p style="font-family:sans-serif , font-size:5px">Reference:Detection of Human Emotion via Speech Recognition by using Speech Spectogram</p>
 
 		</div>
+
 	</body>
 </html>
